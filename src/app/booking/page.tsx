@@ -2,7 +2,7 @@ import DateReserve from "@/components/DateReserve";
 import { MenuItem, Select, TextField } from "@mui/material";
 import { getServerSession } from "next-auth";
 import React from "react";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../api/auth/[...nextauth]/authOptions";
 import getUserProfile from "@/libs/getUserProfile";
 
 const UserData = ({topic, val }: { topic: string; val: string }) => {

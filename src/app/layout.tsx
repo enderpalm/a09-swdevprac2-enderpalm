@@ -1,7 +1,7 @@
 import TopMenu from "@/components/TopMenu";
 import "./globals.css";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "./api/auth/[...nextauth]/authOptions";
 import NextAuthProvider from "./providers/NextAuthProvider";
 
 export const metadata = {
