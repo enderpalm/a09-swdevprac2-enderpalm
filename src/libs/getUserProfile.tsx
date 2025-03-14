@@ -9,7 +9,9 @@ export default async function getUserProfile(token: string) {
       },
     }
   )
-    .then((response) => response.json())
+    .then((response) => {
+      return response.ok ? response.json() : Promise.reject(response);
+    })
     .catch((error) => {
       console.error("Error:", error);
     });
