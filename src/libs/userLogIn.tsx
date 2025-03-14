@@ -10,7 +10,9 @@ export default async function userLogIn(email: string, password: string) {
       body: jsonBody,
     }
   )
-    .then((response) => response.json())
+    .then((response) => {
+        return response.ok ? response.json() : Promise.reject(response);
+    })
     .catch((error) => {
       console.error("Error:", error);
     });

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ export default function Banner() {
   const bannerList: string[] = ["cover", "cover2", "cover3", "cover4"];
   const [banner, setBanner] = useState<number>(0);
   const router = useRouter();
+  const { data: session } = useSession();
 
   return (
     <div className="flex m-0 w-full h-[60vh] relative justify-center items-center">
@@ -31,6 +33,8 @@ export default function Banner() {
           tailored to your needs.
         </h2>
       </div>
+
+      {session && <span className="absolute top-5 right-5 z-10 text-white pointer-events-none font-ubuntu">Welcome {session.user.name}</span>}
 
       <button
         onClick={(e) => {

@@ -3,12 +3,11 @@ import Image from "next/image";
 import TopMenuItem from "./TopMenuItem";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import Link from "@mui/material/Link";
 
 const TopMenu = async () => {
   
   const session = await getServerSession(authOptions);
-  
+
   return (
     <div className="flex h-12 bg-slate-800 items-center p-2">
       {
