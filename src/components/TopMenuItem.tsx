@@ -8,7 +8,7 @@ interface Props {
 
 const TopMenuItem = ({ title, pageRef }: Props) => {
     return (
-        <Link href={pageRef} className="text-amber-800 font-semibold hover:text-white hover:bg-orange-400 hover:shadow-md py-2 px-4 rounded-md font-jetbrains transition-all">
+        <Link href={pageRef} className="text-slate-100 text-sm hover:text-white hover:bg-slate-700 py-2 px-4 rounded-md font-jetbrains transition-all">
             {title}
         </Link>
     );

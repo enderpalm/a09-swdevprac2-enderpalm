@@ -31,7 +31,7 @@ const VenueDetailPage = async ({ params }: { params: { vid: string } }) => {
               <span>{venue.postalcode}</span>
             </div>
             <div className="flex gap-2">
-              <span className="font-jetbrains bg-black text-white w-fit px-2 py-1 mt-2 rounded-md">
+              <span className="font-jetbrains bg-slate-800 text-white w-fit px-2 py-1 mt-2 rounded-md">
                 {venue.dailyrate}฿ / day
               </span>
               <span className="font-jetbrains w-fit px-2 py-1 mt-2 rounded-md border-solid border-2 border-black">

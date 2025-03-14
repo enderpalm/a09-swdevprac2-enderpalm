@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 body {
-  @apply m-0 font-anuphan bg-[rgb(255,236,229)];
+  @apply m-0 font-anuphan bg-slate-200 text-slate-800;
 }
